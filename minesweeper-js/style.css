@@ -1,0 +1,11 @@
+.wrapper .tab {
+  clear: both;
+}
+
+.wrapper .tab div {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  background-color: blue;
+  float: left;
+}
