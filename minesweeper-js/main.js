@@ -3,7 +3,7 @@
  * 步骤原理：
  * 1、开始布局
  * 2、开始布雷
- * 3、开始计算其他的
+ * 3、开始计算其他的 
  * 4、绑定点击事件
  * @param {String} objName class/id name
  * @param {Number} number 代表的是number*number
