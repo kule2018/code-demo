@@ -1,3 +1,7 @@
+.wrapper {
+  margin: 0 auto;
+}
+
 .wrapper .tab {
   clear: both;
 }
@@ -5,7 +9,27 @@
 .wrapper .tab div {
   width: 20px;
   height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
   border: 1px solid #ddd;
   background-color: blue;
   float: left;
+  color: blue;
+}
+
+
+/* 点击打开 */
+
+.wrapper .tab div.active {
+  background-color: #fff;
+  color: #999;
+}
+
+
+/* 右键确认雷区 */
+
+.wrapper .tab div.right_hq {
+  background-color: red;
+  color: red;
 }
