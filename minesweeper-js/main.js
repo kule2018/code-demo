@@ -3,7 +3,7 @@
  * 步骤原理：
  * 1、开始布局
  * 2、开始布雷
- * 3、开始计算其他的 
+ * 3、开始计算其他的
  * 4、绑定点击事件
  * @param {String} objName class/id name
  * @param {Number} number 代表的是number*number
@@ -32,7 +32,7 @@ var slPlanugs = function(objName, number, errorNumber) {
       }
       htmlStr += "</div>";
     }
-    console.log(xyArr);
+    //console.log(xyArr);
     slDom.innerHTML = htmlStr;
   }
   // 生成雷区
@@ -106,7 +106,7 @@ var slPlanugs = function(objName, number, errorNumber) {
             function autoOpen(m, n) {
               // 自动打开周围八个
               this.open = function(a, b) {
-                // console.log(a, b);
+                console.log(a, b);
                 if (a >= 0 && b >= 0 && a < X_NUMBER && b < Y_NUMBER) {
                   var dm = document.getElementsByClassName("btn_" + a + "_" + b)[0];
                   if (dm.getAttribute("class").indexOf("active") < 0) {
@@ -128,7 +128,7 @@ var slPlanugs = function(objName, number, errorNumber) {
             }
             if (this.getAttribute("data-num") == "0") {
               var ij = (this.getAttribute("class").split(" ")[0]).split("_");
-              autoOpen(ij[1], ij[2]);
+              autoOpen(Number(ij[1]), Number(ij[2]));
             }
           }
         }
