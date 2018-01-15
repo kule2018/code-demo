@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3-滤镜效果</title>
+    <link rel="stylesheet" href="../resources/css/static.css">
+    <style>
+        .container{
+            max-width: 1000px;margin: 50px auto;display: table;
+        }
+        .container > div{
+            display: table-cell;width: 50%;table-layout: fixed;padding: 10px 20px;border:1px solid #ccc;
+        }
+        .container > div > img{width: 100%;}
+        .container > div > h2{text-align: center;color: #666;padding: 10px 0;font-weight: normal;}
+        .bot_click{width: 100%;text-align: center;}
+        .bot_click li{display: inline-block;cursor: pointer;text-decoration: underline;padding: 0 5px;color: blue;}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2>原图</h2>
+            <img src="../resources/images/img1.jpg" alt="">
+        </div>
+        <div>
+            <h2>滤镜图片</h2>
+            <img src="../resources/images/img1.jpg" alt="">
+        </div>
+    </div>
+    <ul class="bot_click">
+        <li data-filter="blur(5px)">blur</li>
+        <li data-filter="brightness(50%)">brightness</li>
+        <li data-filter="contrast(50%)">contrast</li>
+        <li data-filter="drop-shadow(8px 8px 10px red)">drop-shadow</li>
+        <li data-filter="grayscale(50%)">grayscale</li>
+        <li data-filter="hue-rotate(180deg)">hue-rotate</li>
+        <li data-filter="invert(100%)">invert</li>
+        <li data-filter="opacity(50%)">opacity</li>
+        <li data-filter="saturate(50%)">saturate</li>
+        <li data-filter="sepia(50%)">sepia</li>
+        <li data-filter="">重置</li>
+    </ul>
+    <script>
+        window.onload = function(){
+            var dom = document.getElementsByClassName("container")[0];
+            var imageDom = dom.getElementsByTagName("img")[1];
+            var liDom = document.getElementsByClassName("bot_click")[0].childNodes,length = liDom.length;
+            for(var i = 0; i < length ;i++){
+                liDom[i].addEventListener("click",function(){
+                    imageDom.style.filter = this.getAttribute("data-filter");
+                },false);
+            }
+        }
+    </script>
+</body>
+</html>
