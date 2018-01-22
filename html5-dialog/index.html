@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5-新标签dialog</title>
+    <style>
+        dialog::backdrop{
+            background-color: rgba(0, 0, 0, 0.6)
+        }
+    </style>
+</head>
+<body>
+    <dialog>
+        <h1>我是一级标题Show</h1>
+        <div>我是对话窗口，你已经打开了我！</div>
+        <button id="close_dialog">关闭</button>
+    </dialog>
+    <dialog>
+        <h1>我是一级标题ShowModal</h1>
+        <div>我是对话窗口，你已经打开了我！</div>
+        <button id="close_dialog2">关闭</button>
+    </dialog>
+    <button id="open_dialog">打开show</button>
+    <button id="open_dialog_modal">打开showModal</button>
+    <br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/>
+    <div id="md">maodian</div>
+    <script>
+        var dialog = document.getElementsByTagName("dialog"),
+        openDialog = document.getElementById("open_dialog"),
+        closeDialog = document.getElementById("close_dialog"),
+        closeDialog2 = document.getElementById("close_dialog2"),
+        openModal = document.getElementById("open_dialog_modal");
+        openDialog.onclick = function(){
+            dialog[0].show(document.getElementById("md"));
+        }
+        openModal.onclick = function(){
+            dialog[1].showModal()
+        }
+        closeDialog.onclick = function(){
+            dialog[0].close();
+        }
+        closeDialog2.onclick = function(){
+            dialog[1].close();
+        }
+    </script>
+</body>
+</html>
