@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3之box-shadow</title>
+    <style>
+        body,html{background: #fafafb;}
+        *{padding: 0;margin: 0;}
+        ul li{list-style: none;}
+        .main{padding: 100px 0}
+        .main ul{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .main ul li {
+            width: 360px;background: #fff;height: 360px;line-height:360px;display: block;float: left;margin-bottom: 60px;text-align: center;font-size: 100px;
+            color: #ccc;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            transition: all .4s;
+            -webkit-transition: all .4s;
+            -moz-transition: all .4s;
+        }
+        .main ul li:nth-child(3n+2){
+            margin-left:60px;margin-right:60px;
+        }
+
+        .main ul li:hover{
+            box-shadow: 1px 4px 10px 2px #ccc;
+            -webkit-box-shadow: 1px 4px 10px 2px #ccc;
+            -moz-box-shadow: 1px 4px 10px 2px #ccc;
+            transform: translateY(-2%);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+</body>
+</html>
