@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3之linear-gradient</title>
+    <style>
+        body,html{background: #fafafb;}
+        *{padding: 0;margin: 0;}
+        .main{padding: 100px 0}
+        .main{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .clear{clear: both;}
+        .main .li-nav{
+            width: 250px;float: left;
+            margin-bottom: 30px;
+        }
+        .main .li-nav span{
+            text-align: center;padding: 10px 0;display: block;
+            color: #666;font-weight: bold;
+        }
+        .main .li-nav .art{
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        .main .li-nav .art-1{
+            background: linear-gradient(0deg,blue,green);
+        }
+        .main .li-nav .art-2{
+            background: linear-gradient(90deg,blue,green);
+        }
+        .main .li-nav .art-3{
+            background: linear-gradient(180deg,blue,green);
+        }
+        .main .li-nav .art-4{
+            background: linear-gradient(270deg,blue,green);
+        }
+
+        .main .li-nav .art-5{
+            background: linear-gradient(to top,blue,green);
+        }
+        .main .li-nav .art-6{
+            background: linear-gradient(to right,blue,green);
+        }
+        .main .li-nav .art-7{
+            background: linear-gradient(to bottom,blue,green);
+        }
+        .main .li-nav .art-8{
+            background: linear-gradient(to left,blue,green);
+        }
+
+        .main .li-nav .art-9{
+            background: linear-gradient(to top left,blue,red,green);
+        }
+        .main .li-nav .art-10{
+            background: linear-gradient(to top right,blue,red,green);
+        }
+        .main .li-nav .art-11{
+            background: linear-gradient(to bottom left,blue,red,green);
+        }
+        .main .li-nav .art-12{
+            background: linear-gradient(to bottom right,blue,red,green);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="li-nav">
+            <span>0deg</span>
+            <div class="art art-1"></div>
+        </div>
+        <div class="li-nav">
+            <span>90deg</span>
+            <div class="art art-2"></div>
+        </div>
+        <div class="li-nav">
+            <span>180deg</span>
+            <div class="art art-3"></div>
+        </div>
+        <div class="li-nav">
+            <span>270deg</span>
+            <div class="art art-4"></div>
+        </div>
+
+        <div class="li-nav">
+            <span>to top</span>
+            <div class="art art-5"></div>
+        </div>
+        <div class="li-nav">
+            <span>to right</span>
+            <div class="art art-6"></div>
+        </div>
+        <div class="li-nav">
+            <span>to bottom</span>
+            <div class="art art-7"></div>
+        </div>
+        <div class="li-nav">
+            <span>to left</span>
+            <div class="art art-8"></div>
+        </div>
+
+        <div class="li-nav">
+            <span>to top left</span>
+            <div class="art art-9"></div>
+        </div>
+        <div class="li-nav">
+            <span>to top right</span>
+            <div class="art art-10"></div>
+        </div>
+        <div class="li-nav">
+            <span>to bottom left</span>
+            <div class="art art-11"></div>
+        </div>
+        <div class="li-nav">
+            <span>to bottom right</span>
+            <div class="art art-12"></div>
+        </div>
+        <div class="clear"></div>
+
+        
+    </div>
+</body>
+</html>
