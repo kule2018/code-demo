@@ -9,24 +9,171 @@
         body,html{background: #fafafb;}
         *{padding: 0;margin: 0;}
         .main{padding: 100px 0}
-        .main ul{
-            width: 1200px;
+        .main{
+            width: 1000px;
             margin: 0 auto;
         }
+        .clear{clear: both;}
+        .main .li-nav{
+            width: 250px;float: left;
+            margin-bottom: 30px;
+        }
+        .main .li-nav span{
+            text-align: center;padding: 10px 0;display: block;
+            color: #666;font-weight: bold;
+        }
+        .main .li-nav .art{
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .main .li-nav .art-1{
+            background: radial-gradient(ellipse,blue,green);
+        }
+        .main .li-nav .art-2{
+            background: radial-gradient(circle,blue,green);
+        }
+        .main .li-nav .art-3{
+            background: radial-gradient(circle at 20%,blue,green);
+        }
+        .main .li-nav .art-4{
+            background: radial-gradient(ellipse at 20%,blue,green);
+        }
+
+        .main .li-nav .art-5{
+            background: radial-gradient(circle at center,blue,green);
+        }
+        .main .li-nav .art-6{
+            background: radial-gradient(circle at top,blue,green);
+        }
+        .main .li-nav .art-7{
+            background: radial-gradient(circle at bottom,blue,green);
+        }
+        .main .li-nav .art-8{
+            background: radial-gradient(at 70% 20%,blue,green);
+        }
+
+        .main .li-nav .art-9{
+            background: radial-gradient(farthest-corner at 30%,blue,red,green);
+        }
+        .main .li-nav .art-10{
+            background: radial-gradient(closest-side at 30%,blue,red,green);
+        }
+        .main .li-nav .art-11{
+            background: radial-gradient(closest-corner at 30%,blue,red,green);
+        }
+        .main .li-nav .art-12{
+            background: radial-gradient(farthest-side at 30%,blue,red,green);
+        }
         
-        
+        .main .li-nav .art-13{
+            background: radial-gradient(30px 90px at 30%, #f00, #ff0, #080);
+        }
+        .main .li-nav .art-14{
+            background: radial-gradient(90px 90px at 30%, #f00, #ff0, #080);
+        }
+        .main .li-nav .art-15{
+            background: radial-gradient(30% 50% at 30%, #f00, #ff0, #080);
+        }
+        .main .li-nav .art-16{
+            background: radial-gradient(50% 50% at 30%, #f00, #ff0, #080);
+        }
+
+        .main .li-nav .art-17{
+            background: radial-gradient(blue 15%,red 50%,green 70%);
+        }
+        .main .li-nav .art-18{
+            background: radial-gradient(circle at 30%,blue 5%,red 80%,green 70%);
+        }
+        .main .li-nav .art-19{
+            background: radial-gradient(circle,blue 15%,red 50%,green 70%);
+        }
     </style>
 </head>
 <body>
     <div class="main">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-        </ul>
+        <div class="li-nav">
+            <span>椭圆渐变ellipse(默认)</span>
+            <div class="art art-1"></div>
+        </div>
+        <div class="li-nav">
+            <span>圆形渐变circle</span>
+            <div class="art art-2"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆心位置</span>
+            <div class="art art-3"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆心位置</span>
+            <div class="art art-4"></div>
+        </div>
+
+        <div class="li-nav">
+            <span>设置圆形位置center</span>
+            <div class="art art-5"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆心位置top</span>
+            <div class="art art-6"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆心位置bottom</span>
+            <div class="art art-7"></div>
+        </div>
+        <div class="li-nav">
+            <span>圆心坐标设置横坐标和纵坐标</span>
+            <div class="art art-8"></div>
+        </div>
+
+        <div class="li-nav">
+            <span>设置圆的半径farthest-corner</span>
+            <div class="art art-9"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆的半径closest-side</span>
+            <div class="art art-10"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆的半径closest-corner</span>
+            <div class="art art-11"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆的半径farthest-side</span>
+            <div class="art art-12"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆的半径30px 90px</span>
+            <div class="art art-13"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆的半径90px 90px</span>
+            <div class="art art-14"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆的半径30% 50%</span>
+            <div class="art art-15"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置圆的半径50% 50%</span>
+            <div class="art art-16"></div>
+        </div>
+
+        <div class="li-nav">
+            <span>设置颜色的不规则性</span>
+            <div class="art art-17"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置颜色的不规则性</span>
+            <div class="art art-18"></div>
+        </div>
+        <div class="li-nav">
+            <span>设置颜色的不规则性</span>
+            <div class="art art-19"></div>
+        </div>
+        <div class="clear"></div>
+
+        
     </div>
 </body>
 </html>
