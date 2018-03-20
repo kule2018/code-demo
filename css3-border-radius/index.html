@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3-border-radius特效</title>
+  <style>
+    :root{
+      background-color: #222;
+    }
+    .conts{width: 800px;margin: 0 auto;}
+    .conts .demo{
+      width: 200px;
+      float: left;
+      position: relative;
+    }
+    .conts .demo1{
+      width: 200px;
+      height: 200px;
+      margin: 80px 0 0 0;
+      background-color: #ffffff;
+    }
+    .conts .demo1 img{
+      width: 100%;
+    }
+    .conts .demo1 .prot{
+      width: 100px;
+      height: 100px;
+      border:3px solid #fff;
+      overflow: hidden;
+      border-radius: 50% 0;
+      transition: all 0.5s;
+      position: absolute;
+      left:50px;
+      top:-50px;
+    }
+    .conts .demo1:hover .prot{
+      border-radius: 50%;
+      border-color: #42b983;
+    }
+    .conts .demo1 .spo{
+      width: 100%;
+      height: 5px;
+      line-height: 30px;
+      text-align: center;
+      background-color: #42b983;
+      position: absolute;
+      bottom: 0px;
+      color: #fff;
+      font-size: 12px;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+    .conts .demo1:hover .spo{
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="conts">
+    <div class="demo demo1">
+      <div class="prot">
+          <img src="http://p9.pstatp.com/origin/pgc-image/15212763923484f513280ae" alt="" srcset="">
+      </div>
+      <div class="spo">CODEHTML</div>
+    </div>
+  </div>
+  
+</body>
+</html>
