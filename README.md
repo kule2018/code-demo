@@ -15,5 +15,6 @@
 
 [border-radius](http://codehtml.cn/code-demo/css3-border-radius/index.html)
 
+[好看的渐变背景](http://codehtml.cn/code-demo/css3-background/index.html)
 
 
