@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../resources/js/css-doodle.js"></script>
+  <style>
+    :root{
+      background-color: #0a0c27;
+      --body-bg: #0a0c27;
+      --doodle-bg: #190B32;
+      --col: 6;
+      --gap: 2px;
+      --width: 95vw;
+      --size: calc((var(--width) - (var(--col) - 1) * var(--gap)) / var(--col));
+    }
+    .main{
+      display: grid;
+      width: 900px;
+      height: 100%;
+      margin: 50px auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    css-doodle{
+      width: 260px;
+      height: 260px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, .03);
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <css-doodle grid="10">
+      :host{
+        display: block;
+        visibility: visible;
+        width: 1em;
+        height: 1em;
+      }
+      :doodle{
+        @grid: 1x10 / 85%;
+      }
+      @place-cell: center;
+      @size: calc(@index() * 10%);
+      
+      border-radius: 50%;
+      border-style: dashed;
+      border-width: calc(@index() * 4px);
+      border-color: hsla(
+        calc(20 * @index()), 70%, 68%,
+        calc(3 / @index() * .8)
+      );
+      
+      transform: rotate(@rand(360deg));
+    </css-doodle>
+    <css-doodle grid="10">
+      :doodle {
+        @grid: 7 / 100%;
+      }
+      
+      @place-cell: center;
+      @size: calc(@index() * 1.55%);
+      
+      transition: .2s ease;
+      transform: rotate(calc(@index() * 5deg));
+      
+      border-radius: 30%;
+      border: 1px solid hsla(
+        calc(10 + 4 * @index()), 70%, 68%,
+        @rand(.8)
+      );
+    </css-doodle>
+    <css-doodle grid="10">
+      :doodle {
+        @grid: 8 / 90%;
+      }
+      transition: .2s @rand(.6s);
+      border-radius: @pick(100% 0, 0 100%);
+      
+      will-change: transform;
+      transform: scale(@rand(.25, 1.25));
+      
+      background: hsla(
+        calc(240 - 6 * @row() * @col()),
+        70%, 68%,
+        @rand(.8)
+      );
+    </css-doodle>
+    <css-doodle>
+      :doodle {
+        @grid: 7 / 100vmax;
+        background: #0a0c27;
+      }
+    
+      @shape: clover 5;
+      background: hsla(
+        calc(360 - @index() * 4),
+        70%, 68%, @rand(.8)
+      );
+      transform:
+        scale(@rand(.2, 1.5))
+        translate(
+          @rand(-50%, 50%), @rand(-50%, 50%)
+        );
+    </css-doodle>
+    <css-doodle>
+      :doodle {
+        @grid: 7 / 100vmax;
+        background: #0a0c27;
+      }
+    
+      @shape: clover 4;
+      background: hsla(
+        calc(360 - @index() * 4),
+        70%, 68%, @rand(.8)
+      );
+      transform:
+        scale(@rand(.2, 1.5))
+        translate(
+          @rand(-50%, 50%), @rand(-50%, 50%)
+        );
+    </css-doodle>
+    <css-doodle>
+      :doodle {
+        @grid: 7 / 100vmax;
+        background: #0a0c27;
+      }
+    
+      @shape: bicorn;
+      background: hsla(
+        calc(360 - @index() * 4),
+        70%, 68%, @rand(.8)
+      );
+      transform:
+        scale(@rand(.2, 1.5))
+        translate(
+          @rand(-50%, 50%), @rand(-50%, 50%)
+        );
+    </css-doodle>
+    <css-doodle>
+        :doodle {
+          @grid: 7 / 100vmax;
+          background: #0a0c27;
+        }
+      
+        @shape: bicorn;
+        background: hsla(
+          calc(360 - @index() * 4),
+          70%, 68%, @rand(.8)
+        );
+        transform:
+          scale(@rand(.2, 1.5))
+          translate(
+            @rand(-50%, 50%), @rand(-50%, 50%)
+          );
+      </css-doodle>
+      <css-doodle>
+        :doodle {
+          @grid: 7 / 100vmax;
+          background: #0a0c27;
+        }
+      
+        @shape: bicorn;
+        background: hsla(
+          calc(360 - @index() * 4),
+          70%, 68%, @rand(.8)
+        );
+        transform:
+          scale(@rand(.2, 1.5))
+          translate(
+            @rand(-50%, 50%), @rand(-50%, 50%)
+          );
+      </css-doodle>
+      <css-doodle>
+        :doodle {
+          @grid: 7 / 100vmax;
+          background: #0a0c27;
+        }
+      
+        --num: calc(@abs(
+            @abs(@row() - 3)
+          + @abs(@col() - 3) - 5) / 5
+        );
+
+        background: rgba(
+          96, 86, 158, calc(var(--num) / 5)
+        );
+      </css-doodle>
+      <css-doodle>
+        :doodle {
+          @grid: 7 / 100vmax;
+          background: #0a0c27;
+        }
+      
+        background: rgba(96, 86, 158, @rand(.9));
+        transition: .2s ease @rand(200ms);
+        transform: rotate(@rand(360deg));
+        clip-path: polygon(
+          @rand(100%) 0, 100% @rand(100%), 0 @rand(100%)
+        );
+      </css-doodle>
+  </div>  
+</body>
+</html>
