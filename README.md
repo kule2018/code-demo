@@ -18,3 +18,5 @@
 [好看的渐变背景](http://codehtml.cn/code-demo/css3-background/index.html)
 
 [跳动的幽灵](http://codehtml.cn/code-demo/css3-float-yl/index.html)
+
+[图片展示动效](http://codehtml.cn/code-demo/css3-skew/index.html)
