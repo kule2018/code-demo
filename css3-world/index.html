@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>炫酷的打字效果</title>
+  <style>
+    body{
+      background: #000;
+    }
+    .container{
+      width: 800px;
+      margin: 0 auto;
+    }
+    .container h1{
+      width: 16ch;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 16s steps(16);
+      color: #00D76D;
+      border-right:1px solid #00D76D;
+      font-weight: normal;
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+    }
+
+    @keyframes caret {
+      50%{
+        border-color: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WORLD-WIDE-WEB</h1>
+    <p></p>
+  </div>
+</body>
+</html>
