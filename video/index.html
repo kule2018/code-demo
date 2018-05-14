@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Video的深入使用</title>
+  <style>
+    .container{
+      width: 800px;
+      margin: 0 auto;
+    }
+    h1{
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>基础视频播放</h1>
+    <video src="./mt-baker_cibsgl.mp4" width="100%" controls></video>
+
+    <h1>自动播放autoplay</h1>
+    <video src="./mt-baker_cibsgl.mp4" width="100%" controls autoplay></video>
+
+    <h1>去除下载按钮nodownload</h1>
+    <video src="./mt-baker_cibsgl.mp4" width="100%" controls controlslist="nodownload"></video>
+
+    <h1>去除全屏nofullscreen</h1>
+    <video src="./mt-baker_cibsgl.mp4" width="100%" controls controlslist="nodownload nofullscreen"></video>
+
+    <h1>视频封面poster</h1>
+    <video src="./mt-baker_cibsgl.mp4" width="100%" controls poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526349212159&di=d6e00c2a2102cac0b50e0e622aa02618&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201411%2F06%2F20141106104720_WHEe2.jpeg"></video>
+
+    <h1>静音muted(移动端非静音模式下无法自动播放)</h1>
+    <video src="./mt-baker_cibsgl.mp4" width="100%" controls muted></video>
+
+    <h1>循环播放loop</h1>
+    <video src="./mt-baker_cibsgl.mp4" width="100%" controls loop></video>
+
+    <h1>预加载preload</h1>
+    <video src="./code.mp4" width="100%" controls preload></video>
+
+    <h1>音量控制volume(区间0-1)</h1>
+    <video src="./code.mp4" width="100%" controls preload id="volume"></video>
+
+    <script type="text/javascript">
+      var volume = document.getElementById("volume");
+      volume.volume = 0.5;
+    </script>
+
+    <h1>播放时间控制</h1>
+    <video src="./code.mp4" width="100%" controls preload id="time"></video>
+    <script type="text/javascript">
+      var time = document.getElementById("time");
+      time.currentTime = 60;// 秒
+    </script>
+
+    <h1>播放地址切换-----<a onclick="changeSrc()">点击切换</a></h1>
+    <video src="./code.mp4" width="100%" controls preload id="_src"></video>
+    <script type="text/javascript">
+      var _src = document.getElementById("_src");
+      function changeSrc(){
+        _src.src = "./mt-baker_cibsgl.mp4";
+      }
+    </script>
+
+    <h1>备用地址切换</h1>
+    <video width="100%" controls id="_source">
+      <source src="./code1.mp4" type="video/mp4">
+      <source src="./mt-baker_cibsgl.mp4" type="video/mp4">
+    </video>
+    <script type="text/javascript">
+      var _source = document.getElementById("_source");
+      setTimeout(function () { 
+        console.log(_source.currentSrc);
+      },2000)
+    </script>
+
+
+
+  </div>
+</body>
+</html>
