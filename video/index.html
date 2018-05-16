@@ -77,8 +77,35 @@
       },2000)
     </script>
 
+    <h1>事件</h1>
+    <video src="./code.mp4" width="100%" controls id="vs"></video>
+    <script type="text/javascript">
+      var v = document.getElementById("vs");
+      // 开始加载 loadstart
+      v.addEventListener('loadstart',function(e){
+       
+      })
+      
+      // 视频时长 durationchange
+      v.addEventListener('durationchange',function(e){
+        console.log("时长", v.duration);
+      })
 
+      // 下载完成 loadedmetadata
+      v.addEventListener('loadedmetadata',function(e){
+        console.log("loadedmetadata");
+      })
 
+      // loadeddata
+      v.addEventListener('loadeddata',function(e){
+        console.log("loadeddata");
+      })
+
+      // 正在下载 progress
+      v.addEventListener('progress',function(e){
+        console.log("progress");
+      })
+    </script>
   </div>
 </body>
 </html>
