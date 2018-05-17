@@ -101,10 +101,64 @@
         console.log("loadeddata");
       })
 
-      // 正在下载 progress
+      // 正在下载视频 progress
       v.addEventListener('progress',function(e){
         console.log("progress");
       })
+
+      // 判断是否可以播放 canplay
+      v.addEventListener('canplay',function(){
+        console.log('canplay');
+      })
+
+      // 判断是否可以流畅播放 canplaythrough
+      v.addEventListener('canplaythrough',function(){
+        console.log('canplaythrough');
+      })
+
+      // play 播放
+      v.addEventListener('play',function(){
+        console.log('play');
+      })
+
+      // pause 暂停
+      v.addEventListener('pause',function(){
+        console.log('pause');
+      })
+
+      // 监控进度
+      // seeking 触发行为
+      v.addEventListener('seeking',function(){
+        console.log('seeking');
+      })
+      // seeked 触发结束
+      v.addEventListener('seeked',function(){
+        console.log('seeked');
+      })
+      // waiting 等待行为
+      v.addEventListener('waiting',function(){
+        console.log('waiting');
+      })
+      // playing 播放
+      v.addEventListener('playing',function(){
+        console.log('playing');
+      })
+
+      // timeupdate 播放时间更新
+      v.addEventListener('timeupdate',function(){
+        console.log('timeupdate');
+      })
+
+      // ended 播放结束
+      v.addEventListener('ended',function(){
+        console.log('ended');
+      })
+
+      // error 播放错误
+      v.addEventListener('error',function(){
+        console.log('error', e);
+      })
+
     </script>
   </div>
 </body>
