@@ -77,6 +77,14 @@
       },2000)
     </script>
 
+    <h1>播放速度</h1>
+    <video src="http://codehtml.cn/code-demo/video/code.mp4" width="100%" controls preload id="_speed"></video>
+    <script type="text/javascript">
+      var _speed = document.getElementById("_speed");
+      _speed.playbackRate = 3;
+    </script>
+
+
     <h1>事件</h1>
     <video src="./code.mp4" width="100%" controls id="vs"></video>
     <script type="text/javascript">
@@ -155,7 +163,7 @@
       })
 
       // error 播放错误
-      v.addEventListener('error',function(){
+      v.addEventListener('error',function(e){
         console.log('error', e);
       })
 
